@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>dom操作案例</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content scroll="true" overflow-scroll="true">
+  <div  class="swiper-container swiper-container-3d">
+    <div #wrapper class="swiper-wrapper"  id="wrapper">
+      <div class="swiper-slide"  >
+        1111
+      </div>
+      <div class="swiper-slide"  >
+        222
+      </div>
+      <div class="swiper-slide">
+        3333
+      </div>
+    </div>
+  </div>
+
+  <div (click)="go()" style="font-size: 40px;">G0</div>
+  <!--<button ion-button [navPush]="pushPage" [navParams]="params">Go</button>-->
+</ion-content>
+
+

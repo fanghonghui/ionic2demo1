@@ -1,0 +1,101 @@
+
+
+<!--<ion-content class="tutorial-page">-->
+
+  <!--<ion-slides pager options="slidesConfig">-->
+    <!--<ion-slide *ngFor="let slide of slides">-->
+      <!--<ion-toolbar>-->
+        <!--<ion-buttons end>-->
+          <!--<button ion-button color="primary">afds</button>-->
+        <!--</ion-buttons>-->
+      <!--</ion-toolbar>-->
+      <!--<img [src]="slide.image" class="slide-image"/>-->
+      <!--<h2 class="slide-title" [innerHTML]="slide.title"></h2>-->
+      <!--<p [innerHTML]="slide.description"></p>-->
+    <!--</ion-slide>-->
+    <!--<ion-slide>-->
+      <!--<ion-toolbar>-->
+      <!--</ion-toolbar>-->
+      <!--<img src="assets/img/ica-slidebox-img-4.png" class="slide-image"/>-->
+      <!--<h2 class="slide-title">Ready to Play?</h2>-->
+      <!--<button ion-button large clear icon-right color="primary">-->
+        <!--Continue-->
+        <!--<ion-icon name="arrow-forward"></ion-icon>-->
+      <!--</button>-->
+    <!--</ion-slide>-->
+  <!--</ion-slides>-->
+<!--</ion-content>-->
+<ion-content>
+<ion-toolbar no-border-top>
+  <ion-segment #segment >
+      <ion-segment-button  value="camera" (ionSelect)="selectedFriends(0)" >
+        1111111
+      </ion-segment-button >
+      <ion-segment-button value="aaaa" (ionSelect)="selectedFriends(1)">
+        222222
+      </ion-segment-button>
+      <ion-segment-button value="bbbb" (ionSelect)="selectedFriends(2)">
+        333333
+      </ion-segment-button>
+      <ion-segment-button value="cccc" (ionSelect)="selectedFriends(3)" >
+        44444
+      </ion-segment-button>
+  </ion-segment>
+  <!--<div class="tabs">-->
+    <!--<span (click)="goToSlide(0)" class="{{currentIndex==0?'active':''}}">11111</span>-->
+    <!--<span (click)="goToSlide(1)" class="{{currentIndex==1?'active':''}}">22222</span>-->
+    <!--<span (click)="goToSlide(2)" class="{{currentIndex==2?'active':''}}">33333</span>-->
+  <!--</div>-->
+</ion-toolbar>
+<ion-slides (ionSlideDidChange)="slideChanged()" >
+  <ion-slide style="height:858px;background:transparent;width:100%;vertical-align: top;" >
+    何为推送？ 在推送系统中生产者决定何时向消费者传递数据，
+    消费者对何时收到数据毫无感知（被动的消费者）。
+    现代JavaScript中Promise是典型的推送系统。
+    作为数据生产者的Promise通过resolve()向数据消费者——回调函数传递数据
+    ：与函数不同，Promise决定向回调函数推送值的时间。
+    RxJS在 JavaScript 中引入了Observable(可观察对象)这个新的推送系统。
+    Observable是多数据值的生产者，向Observer(被动的消费者)推送数据。
+    函数 调用后同步计算并返回单一值
+    生成器函数 | 遍历器 遍历过程中同步计算并返回0个到无穷多个值
+    Promise 异步执行中返回或者不返回单一值
+    Observable 同步或者异步计算并返回0个到无穷多个值
+    Observable 是函数概念的拓展
+  </ion-slide>
+  <ion-slide style="height:600px;background:transparent;">
+    从前面的例子可以看出，使用import命令的时候，用户需要知道所要加载的变量名或函数名，否则无法加载。但是，用户肯定希望快速上手，未必愿意阅读文档，去了解模块有哪些属性和方法。
+    为了给用户提供方便，让他们不用阅读文档就能加载模块，就要用到export default命令，为模块指定默认输出。
+  </ion-slide>
+  <ion-slide style="height:600px;background:transparent;">
+    上面代码的两组写法，第一组是使用export default时，对应的import语句不需要使用大括号；第二组是不使用export default时，对应的import语句需要使用大括号。
+
+    export default命令用于指定模块的默认输出。显然，一个模块只能有一个默认输出，因此export default命令只能使用一次。所以，import命令后面才不用加大括号，因为只可能对应一个方法。
+
+    本质上，export default就是输出一个叫做default的变量或方法，然后系统允许你为它取任意名字。所以，下面的写法是有效的。
+  </ion-slide>
+  <ion-slide style="height:600px;background:transparent;">
+    safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa s
+    afdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa saf
+    dsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaa
+    aaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safds
+    aaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa
+    safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaa
+    aaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa
+    safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa s
+    afdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa saf
+    dsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaa
+    aaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safds
+    aaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa
+    safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaa
+    aaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa
+    safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa s
+    afdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa saf
+    dsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaa
+    aaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safds
+    aaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa
+    safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa safdsaaaaaaa
+    aaaaaaaaaaaaa safdsaaaaaaaaaaaaaaaaaaaa
+  </ion-slide>
+</ion-slides>
+
+</ion-content>

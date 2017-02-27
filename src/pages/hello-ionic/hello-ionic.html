@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>注册验证</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding class="getting-started">
+    <div class="{{flag | boolean}}">注册验证</div>
+  <form [formGroup]="userForm"  >
+    <ion-item>
+      <ion-label>用户名</ion-label>
+      <ion-input type="text" formControlName="userName"></ion-input>
+    </ion-item>
+    <p *ngIf="formErrors.userName" color="danger"> {{ formErrors.userName }}</p>
+    <!-- <p *ngIf="loginForm.controls.LoginID.valid && loginForm.controls.LoginID.touched" secondary> LoginID is good</p>-->
+    <ion-item>
+      <ion-label>密码</ion-label>
+      <ion-input type="password" formControlName="password" validateEqual="confirmPassword"  reverse="true"></ion-input>
+    </ion-item>
+    <p *ngIf="formErrors.password" color="danger">{{formErrors.password}}</p>
+
+    <ion-item>
+      <ion-label>确认密码</ion-label>
+      <ion-input type="password" formControlName="confirmPassword"  validateEqual="password"></ion-input>
+    </ion-item>
+    <p *ngIf="formErrors.confirmPassword" color="danger"> {{formErrors.confirmPassword }}</p>
+
+    <ion-item>
+      <ion-label>email</ion-label>
+      <ion-input formControlName="email" type="email" ></ion-input>
+    </ion-item>
+    <p *ngIf="formErrors.email" color="danger"> {{formErrors.email }}</p>
+    <button ion-button full (click)="login(userForm.value, $event)" [disabled]="!userForm.valid">提交</button>
+    <button ion-button full (click)="signup()">Create</button>
+  </form>
+  <div style="font-size: 20px;" (click)="go()">GO</div>
+
+  <div>共享数据{{data}}</div>
+</ion-content>

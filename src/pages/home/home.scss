@@ -1,0 +1,57 @@
+.text-danger {
+  font-size: 28px;
+  color:red;
+}
+.swiper-container-3d {
+  -webkit-perspective: 1200px;
+  -moz-perspective: 1200px;
+  -o-perspective: 1200px;
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+  height: auto;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding:0 40px;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  -ms-transition-property: -ms-transform;
+  transition-property: transform;
+  transform: translate3d(0px, 0px, 0px);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.swiper-slide {
+  height:200px;
+  background:blue;
+  opacity:1;
+  -webkit-flex-shrink: 0;
+  -ms-flex: 0 0 auto;
+  flex-shrink: 0;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.swiper-wrapper div:nth-child(2){
+  margin: 0 25px;
+}
